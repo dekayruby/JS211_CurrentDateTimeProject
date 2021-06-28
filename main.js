@@ -15,13 +15,40 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
+console.log('*****CONVERTS A NUMBER TO A STRING*****')
+const numToString = () => {
+  let num = 3
+  console.log('first, num is a: ' , typeof num)
+  let stringNum = num.toString()
+  console.log('then, it becomes a string: ' , typeof stringNum)
+  return stringNum
+}
 
+console.log('the function returns the string: ' , numToString())
 
+// const saveNumToString = () => {
+//   let saveNum = document.getElementById("myNumber").innerHTML
+//   return saveNum
+// }
+
+// saveNumToString()
 
 // Write a JavaScript program to convert a string to the number.
 
 
+console.log('******CONVERTS A STRING TO A NUMBER ****')
+const stringToNum = () => {
+  let string = '10.00'
+  console.log('first, string is a: ' , typeof string)
+  let num = parseFloat(string)
+  console.log('then, it becomes a: ' , typeof num)
+  return num
+}
 
+console.log('the function returns the number: ' , stringToNum())
+
+
+console.log('****PRINTS DATATYPES*******')
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
   // * Null
@@ -30,21 +57,77 @@ const displayDate = () => {
   // * NaN
   // * String
   
+  const printDatatype = () => {
+    let cat = 'cat'
+    let dog = 'dog'
+    
+    let booleany = true
+    console.log(typeof booleany)
+    let nully = null
+    console.log(typeof nully)
+    let undefiney = undefined
+    console.log(typeof undefiney)
+    let num = 7
+    console.log(typeof num)
+    let notNum = cat + dog
+    console.log(typeof notNum)
+    let string = 'howdy'
+    console.log(typeof string)
+  }
 
+printDatatype()
   
 // Write a JavaScript program that adds 2 numbers together.
+console.log('******ADDS TWO NUMBERS TOGETHER******')
 
+let add = function() {
+  let x = 1 
+  let y = 7
 
+  return x+y
+}
+
+let answer = add()
+
+console.log('addition answer:', answer)
 
 // Write a JavaScript program that runs only when 2 things are true.
+console.log('*****A FUNCTION THAT RETURNS WHEN BOTH ARE TRUE*****')
 
+const mustBeTrue = (logic1, logic2) => {
+  if (logic1 && logic2) {
+    console.log('I am true')
+    return
+  }
+
+}
+
+mustBeTrue(true, true)
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
+console.log('****RETURNS TRUE IF 1 IS TRUE****')
+const oneIsTrue = (logic1, logic2) => {
+  if(logic1 || logic2) {
+    console.log('I am true')
+    return
+  }
+}
 
-
+oneIsTrue(false, true)
 
 // Write a JavaScript program that runs when both things are not true.  
+
+console.log('*****RETURNS WHEN BOTH ARE NOT TRUE****')
+
+const notTrue = (logic1, logic2) => {
+  if(!logic1 && !logic2){
+    console.log('I am not true')
+    return
+  }
+}
+
+notTrue(false, false)
 
 // ***************************
 //         PART TWO
